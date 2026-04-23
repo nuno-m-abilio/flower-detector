@@ -6,6 +6,10 @@
 
 % --- BASE DE DADOS --- 
 
+% ===================================================
+% FLORES
+% ___________________________________________________
+
 % ---------------------------------------------------
 % HIERARQUIA DE CORES DAS PETALAS
 % Formato: subclasse_cor(cor_especifica, cor_geral)
@@ -77,6 +81,19 @@ subclasse_cor(degrade, multicolorida).
 subclasse_cor(manchada, multicolorida).
 subclasse_cor(listrada, multicolorida).
 subclasse_cor(com_olho_central, multicolorida).
+
+% RELACAO CORES PETALAS
+dominio_atributo(amarelo, cor_petala).
+dominio_atributo(laranja, cor_petala).
+dominio_atributo(vermelho, cor_petala).
+dominio_atributo(rosa, cor_petala).
+dominio_atributo(roxo, cor_petala).
+dominio_atributo(azul, cor_petala).
+dominio_atributo(verde, cor_petala).
+dominio_atributo(branco, cor_petala).
+dominio_atributo(multicolorida, cor_petala).
+
+dominio_atributo(X, cor_petala) :- subclasse_cor(X, _).
 
 % ---------------------------------------------------
 % FORMATO E ESTRUTURA DAS PÉTALAS
@@ -233,6 +250,16 @@ dominio_atributo(morcegos, polinizacao).
 dominio_atributo(vento, polinizacao).
 dominio_atributo(agua, polinizacao).
 
+grupo_maior(X, flor) :- dominio_atributo(X, cor_petala); dominio_atributo(X, forma_petala); dominio_atributo(X, textura_petala); 
+dominio_atributo(X, numero_petalas); dominio_atributo(X, disposicao_corola); dominio_atributo(X, formato_corola); dominio_atributo(X, completude);
+dominio_atributo(X, tipo_perianto); dominio_atributo(X, simetria); dominio_atributo(X, sexualidade_flor); dominio_atributo(X, sexo_planta);
+dominio_atributo(X, merismo); dominio_atributo(X, inflorescencia); dominio_atributo(X, intensidade_aroma); dominio_atributo(X, categoria_aroma);
+dominio_atributo(X, periodo_aroma); dominio_atributo(X, polinizacao).
+
+% ====================================================================
+% FOLHAS
+% ____________________________________________________________________
+
 % ---------------------------------------------------
 % ESTRUTURA DO LIMBO    
 % Formato: dominio_atributo(Valor_Especifico, Nome_Do_Atributo)
@@ -339,6 +366,13 @@ dominio_atributo(suculentas, folha_modificada).
 dominio_atributo(escamas, folha_modificada).
 dominio_atributo(sem_modificacao_folha, folha_modificada).
 
+grupo_maior(X, folha) :- dominio_atributo(X, estrutura_limbo); dominio_atributo(X, formato_limbo); dominio_atributo(X, margem_limbo);
+dominio_atributo(X, nervacao_folha); dominio_atributo(X, cor_folha); dominio_atributo(X, textura_folha); dominio_atributo(X, folha_modificada).
+
+% ==========================================================================
+% CAULES
+% __________________________________________________________________________
+
 % ---------------------------------------------------
 % CONSISTÊNCIA / TIPO BÁSICO
 % Formato: dominio_atributo(Valor_Especifico, Nome_Do_Atributo)
@@ -410,6 +444,13 @@ dominio_atributo(gavinha_caulinar, caule_modificado).
 dominio_atributo(cladodio, caule_modificado).
 dominio_atributo(sem_modificacao_caule, caule_modificado).
 
+grupo_maior(X, caule) :- dominio_atributo(X, consistencia_caule); dominio_atributo(X, superficie_caule); dominio_atributo(X, secao_caule);
+dominio_atributo(X, cor_caule); dominio_atributo(X, caule_modificado).
+
+% =====================================================================
+% RAIZES
+% _____________________________________________________________________
+
 % ---------------------------------------------------
 % TIPO DE SISTEMA RADICULAR
 % Formato: dominio_atributo(Valor_Especifico, Nome_Do_Atributo)
@@ -429,6 +470,12 @@ dominio_atributo(aerea, raiz_modificada).
 dominio_atributo(escora, raiz_modificada).
 dominio_atributo(haustorial, raiz_modificada).
 dominio_atributo(sem_modificacao_raiz, raiz_modificada).
+
+grupo_maior(X, raiz) :- dominio_atributo(X, sistema_radicular); dominio_atributo(X, raiz_modificada).
+
+% ========================================================================
+% CARACTERISTICAS GERAIS DA PLANTA
+% _________________________________________________________________________
 
 % ---------------------------------------------------
 % PORTE / ALTURA TÍPICA
@@ -490,3 +537,6 @@ dominio_atributo(toxica_para_animais, toxicidade).
 dominio_atributo(toxica_para_humanos, toxicidade).
 dominio_atributo(suco_irritante, toxicidade).
 dominio_atributo(altamente_venenosa, toxicidade).
+
+grupo_maior(X, caract_geral) :- dominio_atributo(X, porte_planta); dominio_atributo(X, ciclo_vida); dominio_atributo(X, epoca_floracao);
+dominio_atributo(X, habitat_origem); dominio_atributo(X, toxicidade).
