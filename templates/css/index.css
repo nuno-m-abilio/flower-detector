@@ -35,6 +35,7 @@ body{
 
 .col{
     margin: 0 16px;
+    flex-direction: column;
     /* max-width: 100%; */
 }
 
@@ -56,10 +57,6 @@ body{
 
 .actions:hover{
         
-}
-
-.container{
-    flex
 }
 
 .filter-container{
@@ -103,6 +100,10 @@ a{
     color: #9f4451;
     font-weight: bold;
 }
+
+/* #resultados{
+    display: none;
+} */
 
 .footer{
     display: flex;
