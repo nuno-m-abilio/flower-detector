@@ -232,7 +232,7 @@ dominio_atributo(desagradavel, categoria_aroma).
 
 % --- Periodo de Liberacao do Aroma ---
 dominio_atributo(diurno, periodo_aroma).
-dominio_atributo(noturno, periodo_aroma).
+dominio_atributo(noturno_aroma, periodo_aroma).
 dominio_atributo(constante, periodo_aroma).
 
 % ---------------------------------------------------
@@ -511,7 +511,7 @@ dominio_atributo(outono, epoca_floracao).
 dominio_atributo(inverno, epoca_floracao).
 dominio_atributo(floracao_longa, epoca_floracao).
 dominio_atributo(reflorescente, epoca_floracao).
-dominio_atributo(noturna, epoca_floracao).
+dominio_atributo(noturna_floracao, epoca_floracao).
 
 % ---------------------------------------------------
 % HABITAT / ORIGEM
@@ -540,3 +540,295 @@ dominio_atributo(altamente_venenosa, toxicidade).
 
 grupo_maior(X, caract_geral) :- dominio_atributo(X, porte_planta); dominio_atributo(X, ciclo_vida); dominio_atributo(X, epoca_floracao);
 dominio_atributo(X, habitat_origem); dominio_atributo(X, toxicidade).
+
+% ============================================================
+% ESTRUTURA PRINCIPAL
+% caracteristica(+NomeFlor, +Atributo, +Valor)
+%
+% Exemplos de uso:
+%   ?- caracteristica(girassol, X, Y).          % tudo do girassol
+%   ?- caracteristica(X, cor_petala, amarelo).  % flores amarelas
+%   ?- caracteristica(X, cor_petala, Y).        % flores e suas cores
+% ============================================================
+
+% ------------------------------------------------------------
+% GIRASSOL (Helianthus annuus)
+% ------------------------------------------------------------
+caracteristica(girassol, cor_petala,        amarelo_dourado).
+caracteristica(girassol, formato_corola,    capitular).
+caracteristica(girassol, numero_petalas,    treze_a_vinteuma).
+caracteristica(girassol, forma_petala,      lanceolada_petala).
+caracteristica(girassol, inflorescencia,    capitulo).
+caracteristica(girassol, polinizacao,       abelhas).
+caracteristica(girassol, polinizacao,       borboletas).
+caracteristica(girassol, intensidade_aroma, suave).
+caracteristica(girassol, porte_planta,      alta).
+caracteristica(girassol, ciclo_vida,        anual).
+caracteristica(girassol, epoca_floracao,    verao).
+caracteristica(girassol, habitat_origem,    temperado).
+caracteristica(girassol, consistencia_caule, herbaceo).
+caracteristica(girassol, toxicidade,        nao_toxica).
+caracteristica(girassol, formato_limbo,     oval).
+caracteristica(girassol, margem_limbo,      dentada).
+caracteristica(girassol, textura_folha,     rugosa).
+caracteristica(girassol, simetria,          actinomorfa).
+caracteristica(girassol, sexualidade_flor,  perfeita).
+
+% ------------------------------------------------------------
+% ROSA (Rosa spp.)
+% ------------------------------------------------------------
+caracteristica(rosa, cor_petala,        vermelho_cereja).
+caracteristica(rosa, formato_corola,    rotacea).
+caracteristica(rosa, disposicao_corola, dupla).
+caracteristica(rosa, numero_petalas,    numerosas).
+caracteristica(rosa, forma_petala,      arredondada).
+caracteristica(rosa, textura_petala,    velutinosa).
+caracteristica(rosa, inflorescencia,    flor_solitaria).
+caracteristica(rosa, polinizacao,       abelhas).
+caracteristica(rosa, polinizacao,       borboletas).
+caracteristica(rosa, intensidade_aroma, intenso).
+caracteristica(rosa, categoria_aroma,   floral_doce).
+caracteristica(rosa, periodo_aroma,     diurno).
+caracteristica(rosa, porte_planta,      arbustiva).
+caracteristica(rosa, ciclo_vida,        perene_sempre_verde).
+caracteristica(rosa, epoca_floracao,    reflorescente).
+caracteristica(rosa, habitat_origem,    temperado).
+caracteristica(rosa, consistencia_caule, lenhoso_arbusto).
+caracteristica(rosa, superficie_caule,  aculeado).
+caracteristica(rosa, toxicidade,        nao_toxica).
+caracteristica(rosa, formato_limbo,     oval).
+caracteristica(rosa, margem_limbo,      serrada).
+caracteristica(rosa, simetria,          actinomorfa).
+caracteristica(rosa, sexualidade_flor,  perfeita).
+
+% ------------------------------------------------------------
+% ORQUÍDEA PHALAENOPSIS (Phalaenopsis spp.)
+% ------------------------------------------------------------
+caracteristica(orquidea_phalaenopsis, cor_petala,        branco_puro).
+caracteristica(orquidea_phalaenopsis, formato_corola,    bilabial).
+caracteristica(orquidea_phalaenopsis, disposicao_corola, simples_disposicao).
+caracteristica(orquidea_phalaenopsis, numero_petalas,    seis).
+caracteristica(orquidea_phalaenopsis, forma_petala,      arredondada).
+caracteristica(orquidea_phalaenopsis, textura_petala,    cerosa_petala).
+caracteristica(orquidea_phalaenopsis, inflorescencia,    racemo).
+caracteristica(orquidea_phalaenopsis, polinizacao,       abelhas).
+caracteristica(orquidea_phalaenopsis, polinizacao,       mariposas).
+caracteristica(orquidea_phalaenopsis, intensidade_aroma, suave).
+caracteristica(orquidea_phalaenopsis, categoria_aroma,   floral_doce).
+caracteristica(orquidea_phalaenopsis, porte_planta,      media).
+caracteristica(orquidea_phalaenopsis, ciclo_vida,        perene_sempre_verde).
+caracteristica(orquidea_phalaenopsis, epoca_floracao,    floracao_longa).
+caracteristica(orquidea_phalaenopsis, habitat_origem,    epifita).
+caracteristica(orquidea_phalaenopsis, consistencia_caule, herbaceo).
+caracteristica(orquidea_phalaenopsis, toxicidade,        nao_toxica).
+caracteristica(orquidea_phalaenopsis, formato_limbo,     oval).
+caracteristica(orquidea_phalaenopsis, textura_folha,     lisa_brilhante).
+caracteristica(orquidea_phalaenopsis, simetria,          zigomorfa).
+caracteristica(orquidea_phalaenopsis, sexualidade_flor,  perfeita).
+caracteristica(orquidea_phalaenopsis, merismo,           trimera).
+
+% ------------------------------------------------------------
+% LAVANDA (Lavandula angustifolia)
+% ------------------------------------------------------------
+caracteristica(lavanda, cor_petala,        lavanda).
+caracteristica(lavanda, formato_corola,    tubular).
+caracteristica(lavanda, disposicao_corola, simples_disposicao).
+caracteristica(lavanda, numero_petalas,    cinco).
+caracteristica(lavanda, forma_petala,      linear_petala).
+caracteristica(lavanda, inflorescencia,    espiga).
+caracteristica(lavanda, polinizacao,       abelhas).
+caracteristica(lavanda, polinizacao,       borboletas).
+caracteristica(lavanda, polinizacao,       mariposas).
+caracteristica(lavanda, intensidade_aroma, muito_intenso).
+caracteristica(lavanda, categoria_aroma,   floral_doce).
+caracteristica(lavanda, periodo_aroma,     constante).
+caracteristica(lavanda, porte_planta,      arbustiva).
+caracteristica(lavanda, ciclo_vida,        perene_sempre_verde).
+caracteristica(lavanda, epoca_floracao,    verao).
+caracteristica(lavanda, habitat_origem,    mediterraneo).
+caracteristica(lavanda, consistencia_caule, sublenhoso).
+caracteristica(lavanda, toxicidade,        nao_toxica).
+caracteristica(lavanda, formato_limbo,     linear_limbo).
+caracteristica(lavanda, textura_folha,     tomentosa).
+caracteristica(lavanda, simetria,          zigomorfa).
+caracteristica(lavanda, sexualidade_flor,  perfeita).
+
+% ------------------------------------------------------------
+% TULIPA (Tulipa spp.)
+% ------------------------------------------------------------
+caracteristica(tulipa, cor_petala,        vermelho_escarlate).
+caracteristica(tulipa, formato_corola,    campanulada).
+caracteristica(tulipa, disposicao_corola, simples_disposicao).
+caracteristica(tulipa, numero_petalas,    seis).
+caracteristica(tulipa, forma_petala,      arredondada).
+caracteristica(tulipa, textura_petala,    lisa).
+caracteristica(tulipa, inflorescencia,    flor_solitaria).
+caracteristica(tulipa, polinizacao,       abelhas).
+caracteristica(tulipa, polinizacao,       vento).
+caracteristica(tulipa, intensidade_aroma, inodora).
+caracteristica(tulipa, porte_planta,      media).
+caracteristica(tulipa, ciclo_vida,        geofita).
+caracteristica(tulipa, epoca_floracao,    primavera).
+caracteristica(tulipa, habitat_origem,    temperado).
+caracteristica(tulipa, consistencia_caule, herbaceo).
+caracteristica(tulipa, caule_modificado,  bulbo_tunica).
+caracteristica(tulipa, toxicidade,        toxica_para_animais).
+caracteristica(tulipa, formato_limbo,     lanceolada_limbo).
+caracteristica(tulipa, textura_folha,     cerosa_folha).
+caracteristica(tulipa, simetria,          actinomorfa).
+caracteristica(tulipa, sexualidade_flor,  perfeita).
+caracteristica(tulipa, merismo,           trimera).
+
+% ------------------------------------------------------------
+% MARGARIDA (Bellis perennis / Leucanthemum vulgare)
+% ------------------------------------------------------------
+caracteristica(margarida, cor_petala,        branco_puro).
+caracteristica(margarida, formato_corola,    capitular).
+caracteristica(margarida, disposicao_corola, simples_disposicao).
+caracteristica(margarida, numero_petalas,    treze_a_vinteuma).
+caracteristica(margarida, forma_petala,      lanceolada_petala).
+caracteristica(margarida, inflorescencia,    capitulo).
+caracteristica(margarida, polinizacao,       abelhas).
+caracteristica(margarida, polinizacao,       borboletas).
+caracteristica(margarida, intensidade_aroma, inodora).
+caracteristica(margarida, porte_planta,      rasteira).
+caracteristica(margarida, ciclo_vida,        perene_sempre_verde).
+caracteristica(margarida, epoca_floracao,    primavera).
+caracteristica(margarida, habitat_origem,    temperado).
+caracteristica(margarida, consistencia_caule, herbaceo).
+caracteristica(margarida, toxicidade,        nao_toxica).
+caracteristica(margarida, formato_limbo,     espatulada_limbo).
+caracteristica(margarida, margem_limbo,      crenada).
+caracteristica(margarida, simetria,          actinomorfa).
+caracteristica(margarida, sexualidade_flor,  perfeita).
+
+% ------------------------------------------------------------
+% LÍRIO (Lilium spp.)
+% ------------------------------------------------------------
+caracteristica(lirio, cor_petala,        branco_puro).
+caracteristica(lirio, formato_corola,    infundibuliforme).
+caracteristica(lirio, disposicao_corola, simples_disposicao).
+caracteristica(lirio, numero_petalas,    seis).
+caracteristica(lirio, forma_petala,      lanceolada_petala).
+caracteristica(lirio, textura_petala,    lisa).
+caracteristica(lirio, inflorescencia,    racemo).
+caracteristica(lirio, polinizacao,       abelhas).
+caracteristica(lirio, polinizacao,       mariposas).
+caracteristica(lirio, intensidade_aroma, muito_intenso).
+caracteristica(lirio, categoria_aroma,   floral_doce).
+caracteristica(lirio, periodo_aroma,     diurno).
+caracteristica(lirio, porte_planta,      alta).
+caracteristica(lirio, ciclo_vida,        geofita).
+caracteristica(lirio, epoca_floracao,    verao).
+caracteristica(lirio, habitat_origem,    temperado).
+caracteristica(lirio, consistencia_caule, herbaceo).
+caracteristica(lirio, caule_modificado,  bulbo_escamoso).
+caracteristica(lirio, toxicidade,        toxica_para_animais).
+caracteristica(lirio, formato_limbo,     lanceolada_limbo).
+caracteristica(lirio, textura_folha,     lisa_brilhante).
+caracteristica(lirio, simetria,          actinomorfa).
+caracteristica(lirio, sexualidade_flor,  perfeita).
+caracteristica(lirio, merismo,           trimera).
+
+% ------------------------------------------------------------
+% VIOLETA (Viola odorata)
+% ------------------------------------------------------------
+caracteristica(violeta, cor_petala,        violeta_medio).
+caracteristica(violeta, formato_corola,    zigomorfa).
+caracteristica(violeta, disposicao_corola, simples_disposicao).
+caracteristica(violeta, numero_petalas,    cinco).
+caracteristica(violeta, forma_petala,      arredondada).
+caracteristica(violeta, textura_petala,    velutinosa).
+caracteristica(violeta, inflorescencia,    flor_solitaria).
+caracteristica(violeta, polinizacao,       abelhas).
+caracteristica(violeta, intensidade_aroma, intenso).
+caracteristica(violeta, categoria_aroma,   floral_doce).
+caracteristica(violeta, periodo_aroma,     diurno).
+caracteristica(violeta, porte_planta,      rasteira).
+caracteristica(violeta, ciclo_vida,        perene_sempre_verde).
+caracteristica(violeta, epoca_floracao,    primavera).
+caracteristica(violeta, habitat_origem,    temperado).
+caracteristica(violeta, consistencia_caule, herbaceo).
+caracteristica(violeta, toxicidade,        nao_toxica).
+caracteristica(violeta, formato_limbo,     cordada).
+caracteristica(violeta, margem_limbo,      crenada).
+caracteristica(violeta, simetria,          zigomorfa).
+caracteristica(violeta, sexualidade_flor,  perfeita).
+
+% ------------------------------------------------------------
+% CRISÂNTEMO (Chrysanthemum morifolium)
+% ------------------------------------------------------------
+caracteristica(crisantemo, cor_petala,        amarelo_dourado).
+caracteristica(crisantemo, formato_corola,    capitular).
+caracteristica(crisantemo, disposicao_corola, dupla).
+caracteristica(crisantemo, numero_petalas,    numerosas).
+caracteristica(crisantemo, forma_petala,      linear_petala).
+caracteristica(crisantemo, inflorescencia,    capitulo).
+caracteristica(crisantemo, polinizacao,       abelhas).
+caracteristica(crisantemo, polinizacao,       borboletas).
+caracteristica(crisantemo, intensidade_aroma, moderado).
+caracteristica(crisantemo, categoria_aroma,   especiado).
+caracteristica(crisantemo, porte_planta,      arbustiva).
+caracteristica(crisantemo, ciclo_vida,        perene_sempre_verde).
+caracteristica(crisantemo, epoca_floracao,    outono).
+caracteristica(crisantemo, habitat_origem,    temperado).
+caracteristica(crisantemo, consistencia_caule, herbaceo).
+caracteristica(crisantemo, toxicidade,        toxica_para_animais).
+caracteristica(crisantemo, formato_limbo,     lobada).
+caracteristica(crisantemo, margem_limbo,      dentada).
+caracteristica(crisantemo, textura_folha,     pubescente).
+caracteristica(crisantemo, simetria,          actinomorfa).
+caracteristica(crisantemo, sexualidade_flor,  perfeita).
+
+% ------------------------------------------------------------
+% ANTÚRIO (Anthurium andraeanum)
+% ------------------------------------------------------------
+caracteristica(anthurio, cor_petala,        vermelho_escarlate).
+caracteristica(anthurio, formato_corola,    em_espata).
+caracteristica(anthurio, disposicao_corola, simples_disposicao).
+caracteristica(anthurio, numero_petalas,    uma).
+caracteristica(anthurio, textura_petala,    cerosa_petala).
+caracteristica(anthurio, inflorescencia,    espata_espadice).
+caracteristica(anthurio, polinizacao,       besouros).
+caracteristica(anthurio, polinizacao,       moscas).
+caracteristica(anthurio, intensidade_aroma, inodora).
+caracteristica(anthurio, porte_planta,      media).
+caracteristica(anthurio, ciclo_vida,        perene_sempre_verde).
+caracteristica(anthurio, epoca_floracao,    floracao_longa).
+caracteristica(anthurio, habitat_origem,    tropical).
+caracteristica(anthurio, consistencia_caule, herbaceo).
+caracteristica(anthurio, toxicidade,        toxica_para_humanos).
+caracteristica(anthurio, formato_limbo,     cordada).
+caracteristica(anthurio, textura_folha,     lisa_brilhante).
+caracteristica(anthurio, simetria,          actinomorfa).
+caracteristica(anthurio, sexualidade_flor,  perfeita).
+
+% ============================================================
+% REGRAS AUXILIARES DE CONSULTA
+% ============================================================
+
+% flores_com/2 — lista todas as flores que possuem um par atributo/valor
+% Uso: flores_com(cor_petala, amarelo, Flor)
+flores_com(Atributo, Valor, Flor) :-
+    caracteristica(Flor, Atributo, Valor).
+
+% flores_com_cor/2 — busca por cor levando em conta hierarquia
+% Uso: flores_com_cor(amarelo, Flor)
+flores_com_cor(CorGeral, Flor) :-
+    subclasse_cor(CorEspecifica, CorGeral),
+    caracteristica(Flor, cor_petala, CorEspecifica).
+flores_com_cor(CorGeral, Flor) :-
+    caracteristica(Flor, cor_petala, CorGeral).
+flores_com_cor(CorEspecifica, Flor) :-
+    subclasse_cor(CorEspecifica, _),
+    caracteristica(Flor, cor_petala, CorEspecifica).
+
+% total_caracteristicas/2 — conta quantas características tem uma flor
+total_caracteristicas(Flor, Total) :-
+    findall(1, caracteristica(Flor, _, _), Lista),
+    length(Lista, Total).
+
+% flores_unicas/1 — lista todas as flores sem duplicatas
+flores_unicas(Flores) :-
+    findall(F, caracteristica(F, _, _), Todas),
+    sort(Todas, Flores).
