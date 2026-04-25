@@ -18,6 +18,7 @@ function renderizarInterface() {
 
         const select = document.createElement('select');
         select.id = `input_${chave}`; // ID padrão que usamos para ler depois
+        select.multiple = true;
 
         const optDefault = document.createElement('option');
         optDefault.value = "";

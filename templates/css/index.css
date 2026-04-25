@@ -36,15 +36,9 @@ ul li a {
     font-size: larger;
 }
 
-ul li a .active{
-    background-color: #F6EEE3;
-    color: #9f4451;
-    font-weight: bold;
-}
-
 .body{
     /* organizacao da pagina */
-    display: inherit;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
@@ -53,10 +47,7 @@ ul li a .active{
 
 .row{
     margin: 16px 0;
-    display: inherit;
-    justify-content: space-around;
-    align-content: center;
-    
+    flex-direction: row;
 }
 
 .col{
@@ -87,6 +78,31 @@ ul li a .active{
     font-weight: bold;
 }
 
+.form-item{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    border-style: solid;
+    border-color: #3d5959;
+    background-color: #518989;
+    border-width: 5px;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+.form-item label {
+    font-weight: bold;
+    color: #F6EEE3;
+    text-transform: uppercase;
+}
+
+.form-item input {
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+}
 
 .filter-container{
     display: grid;

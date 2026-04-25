@@ -26,18 +26,19 @@
     <main class="body">
       <div class="col">
         <form action="excluir" method="get" class="excluir">
-          <div class="row">
+          <h1>Apagar dados de uma planta:</h1>
+          <div class="row form-item">
             <label for="nome-planta"
-              >Informe o nome da planta que deseja excluir:</label
+            >Nome da planta:</label
             >
             <input type="text" name="nome-planta" id="nome-planta" />
-            <input
-              type="button"
-              value="excluir"
-              class="action"
-              onclick="alert('Planta excluida com sucesso da base de dados')"
-            />
           </div>
+          <input
+            type="button"
+            value="Excluir"
+            class="action"
+            onclick="alert('Planta excluida com sucesso da base de dados')"
+          />
         </form>
       </div>
     </main>
@@ -58,5 +59,7 @@
         </p>
       </div>
     </footer>
+    <script src="js/dados_botanicos.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
