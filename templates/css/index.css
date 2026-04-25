@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@ ul li a {
 }
 
 .header{
-    background-color: #9f4451;
+    background-color: #AE281D;
     padding: 16px;
     display: inherit;
     flex-direction: row;
@@ -71,7 +71,7 @@ ul li a {
 .actions{
     display: inherit;
     border-style: solid;
-    border-color: #9f4451;
+    border-color: #AE281D;
     border-width: 5px;
     border-radius: 16px;
     padding: 12px;
@@ -80,7 +80,7 @@ ul li a {
 
 .actions a{
     text-decoration: none;
-    color: #9f4451;
+    color: #AE281D;
     font-weight: bold;
 }
 
@@ -164,7 +164,7 @@ ul li a {
     grid-template-columns: 50% 50%;
 
     padding: 24px;
-    background-color: #9f4451;
+    background-color: #AE281D;
     font-weight: bold;
     color: #F6EEE3;
     bottom: 0;
