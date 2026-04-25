@@ -15,18 +15,31 @@
         />
       </a>
       <p>Protótipo informativo para identificacao de plantas</p>
+      <ul>
+        <li><a href="index.html">Página inicial</a></li>
+        <li><a href="buscar.html">Buscar</a></li>
+        <li><a href="adicionar.html">Cadastrar</a></li>
+        <li><a href="editar.html">Editar</a></li>
+        <li><a href="excluir.html">Excluir</a></li>
+      </ul>
     </header>
     <main class="body">
-        <div class="col">
-            <form action="excluir" method="get" class="excluir">
-            <div class="row">
-                    <label for="nome-planta">Informe o nome da planta que deseja excluir:</label>
-                    <input type="text" name="nome-planta" id="nome-planta">
-                    <input type="button" value="excluir" class="action" onclick="alert('Planta excluida com sucesso da base de dados')">
-                </div>
-            </form>
-        </div>
-
+      <div class="col">
+        <form action="excluir" method="get" class="excluir">
+          <div class="row">
+            <label for="nome-planta"
+              >Informe o nome da planta que deseja excluir:</label
+            >
+            <input type="text" name="nome-planta" id="nome-planta" />
+            <input
+              type="button"
+              value="excluir"
+              class="action"
+              onclick="alert('Planta excluida com sucesso da base de dados')"
+            />
+          </div>
+        </form>
+      </div>
     </main>
     <footer class="footer">
       <div class="col">

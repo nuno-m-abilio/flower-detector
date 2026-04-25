@@ -15,29 +15,30 @@
         />
       </a>
       <p>Protótipo informativo para identificacao de plantas</p>
+      <ul>
+        <li><a href="index.html">Página inicial</a></li>
+        <li><a href="buscar.html">Buscar</a></li>
+        <li><a href="adicionar.html">Cadastrar</a></li>
+        <li><a href="editar.html">Editar</a></li>
+        <li><a href="excluir.html">Excluir</a></li>
+      </ul>
     </header>
     <main class="body">
       <div class="col">
         <h1>Vamos identificar sua planta!</h1>
         <form action="">
-            <h4>Características das flores:</h4>
-            <div id="filters" class="filter-container"></div>
-            <input type="button" value="Buscar" id="buscar"/>
-            <input type="button" value="Nova busca" id="limpar">
+          <h4>Características das flores:</h4>
+          <div id="filters" class="filter-container"></div>
+          <input type="button" value="Buscar" id="buscar" />
+          <input type="button" value="Nova busca" id="limpar" />
         </form>
       </div>
-      <div class="col" id="resultados">
-            <div class="row">
-                <h1>De acordo com as informacoes fornecidas, sua planta pode ser:</h1>
-                    <div id="dados-resultados" class="resultados-container"></div>
-                </div>
-            <div class="row">
-                <h2>Mas também pode ser:</h2>
-            </div>
-            <table>
-
-            </table>
+      <div class="col">
+        <div class="row">
+          <div id="resultados" class="resultados-container"></div>
+          <div id="mais-opcoes"></div>
         </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="col">

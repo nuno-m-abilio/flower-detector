@@ -15,16 +15,26 @@
         />
       </a>
       <p>Protótipo informativo para identificacao de plantas</p>
+      <ul>
+        <li><a href="index.html">Página inicial</a></li>
+        <li><a href="buscar.html">Buscar</a></li>
+        <li><a href="adicionar.html">Cadastrar</a></li>
+        <li><a href="editar.html">Editar</a></li>
+        <li><a href="excluir.html">Excluir</a></li>
+      </ul>
     </header>
     <main class="body">
       <div class="col">
         <h1>Adicionar sua planta</h1>
         <form action="">
-            <label for="nome-planta">Nome da planta</label>
-          <input type="text" name="nome-planta" id="nome-planta">
-            <h3>Características das flores</h3>
+          <label for="nome-planta">Nome da planta</label>
+          <input type="text" name="nome-planta" id="nome-planta" />
+          <h3>Características das flores</h3>
           <div id="filters" class="filter-container"></div>
-          <input type="submit" onclick="alert('Planta adicionada com sucesso!')" />
+          <input
+            type="submit"
+            onclick="alert('Planta adicionada com sucesso!')"
+          />
         </form>
       </div>
     </main>
