@@ -34,6 +34,8 @@ ul li a {
     color: #F6EEE3;
     /* font-weight: bold; */
     font-size: larger;
+    /* position: fixed; */
+    width: auto;
 }
 
 .body{
@@ -43,22 +45,26 @@ ul li a {
     align-items: center;
     justify-content: space-around;
     margin: 32px;
+    width: 100%;
 }
 
 .row{
     margin: 16px 0;
-    flex-direction: row;
+    width: 100%;
 }
 
 .col{
     margin: 0 16px;
+    max-width: 100%;
+    min-width: 50;
+    display: inherit;
     flex-direction: column;
-    /* max-width: 100%; */
+    justify-content: space-around;
 }
 
 .img{
     float: right;
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
 }
 
@@ -162,5 +168,5 @@ ul li a {
     font-weight: bold;
     color: #F6EEE3;
     bottom: 0;
-    position: sticky;
+    position: relative;
 }
