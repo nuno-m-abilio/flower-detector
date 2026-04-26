@@ -17,7 +17,7 @@ function renderizarInterface() {
         label.textContent = categoria.label;
 
         const select = document.createElement('select');
-        select.id = `input_${chave}`; // ID padrão que usamos para ler depois
+        select.id = `input_${chave}`; // ID padrão para ler depois
         select.multiple = true;
 
         const optDefault = document.createElement('option');
