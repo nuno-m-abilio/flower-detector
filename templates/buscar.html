@@ -15,37 +15,37 @@
         />
       </a>
       <p>Protótipo informativo para identificacao de plantas</p>
+      <ul>
+        <li><a href="index.html">Página inicial</a></li>
+        <li><a href="buscar.html">Buscar</a></li>
+        <li><a href="adicionar.html">Cadastrar</a></li>
+        <li><a href="editar.html">Editar</a></li>
+        <li><a href="excluir.html">Excluir</a></li>
+      </ul>
     </header>
     <main class="body">
       <div class="col">
-        <div class="row actions">
-          <a href="buscar.html"> Buscar planta </a>
-        </div>
-        <div class="row actions">
-          <a href="adicionar.html"> Incluir nova planta </a>
-        </div>
-        <div class="row actions">
-          <a href="editar.html"> Alterar informações de uma planta </a>
-        </div>
-        <div class="row actions">
-          <a href="excluir.html"> Excluir planta da base de dados </a>
-        </div>
+        <h1>Buscar uma planta</h1>
+        <form action="">
+          <h4>Características das flores:</h4>
+          <div id="filters" class="filter-container"></div>
+          <input type="button" value="Buscar" id="buscar" />
+          <input type="button" value="Nova busca" id="limpar" />
+        </form>
       </div>
-      <div class="col img">
-        <p>ApotecárIA é apenas um protótipo informativo. Em caso de intoxicacao
-          ou perigo, procure imediatamente o servico de saúde mais próximo. Este
-          protótipo é apenas informativo. Consulte um especialista para
-          identificação correta e precisa de qualquer espécie vegetal.</p>
-        <img src="imgs/apothecary_sq.jpg" alt="" />
+      <div class="col">
+        <div class="row">
+          <div id="resultados" class="resultados-container"></div>
+          <div id="mais-opcoes"></div>
+        </div>
       </div>
     </main>
     <footer class="footer">
       <div class="col">
         <p>
           ApotecárIA é apenas um protótipo informativo. Em caso de intoxicacao
-          ou perigo, procure imediatamente o servico de saúde mais próximo. Este
-          protótipo é apenas informativo. Consulte um especialista para
-          identificação correta e precisa de qualquer espécie vegetal.
+          ou perigo, procure imediatamente o servico de saúde mais próximo. Para
+          informações precisas, consulte um especialista
         </p>
       </div>
       <div class="col">
@@ -56,5 +56,8 @@
         </p>
       </div>
     </footer>
+    <script src="js/dados_botanicos.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/buscar.js"></script>
   </body>
 </html>

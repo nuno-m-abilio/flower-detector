@@ -15,28 +15,29 @@
         />
       </a>
       <p>Protótipo informativo para identificacao de plantas</p>
+      <ul>
+        <li><a href="index.html">Página inicial</a></li>
+        <li><a href="buscar.html">Buscar</a></li>
+        <li><a href="adicionar.html">Cadastrar</a></li>
+        <li><a href="editar.html">Editar</a></li>
+        <li><a href="excluir.html">Excluir</a></li>
+      </ul>
     </header>
     <main class="body">
       <div class="col">
-        <div class="row actions">
-          <a href="buscar.html"> Buscar planta </a>
-        </div>
-        <div class="row actions">
-          <a href="adicionar.html"> Incluir nova planta </a>
-        </div>
-        <div class="row actions">
-          <a href="editar.html"> Alterar informações de uma planta </a>
-        </div>
-        <div class="row actions">
-          <a href="excluir.html"> Excluir planta da base de dados </a>
-        </div>
-      </div>
-      <div class="col img">
-        <p>ApotecárIA é apenas um protótipo informativo. Em caso de intoxicacao
-          ou perigo, procure imediatamente o servico de saúde mais próximo. Este
-          protótipo é apenas informativo. Consulte um especialista para
-          identificação correta e precisa de qualquer espécie vegetal.</p>
-        <img src="imgs/apothecary_sq.jpg" alt="" />
+        <h1>Adicionar uma nova planta</h1>
+        <form action="">
+          <div class="row form-item">
+            <label for="nome-planta">Nome da planta</label>
+            <input type="text" name="nome-planta" id="nome-planta" />
+          </div>
+          <h3>Características das flores</h3>
+          <div id="filters" class="filter-container"></div>
+          <input
+            type="submit"
+            onclick="alert('Planta adicionada com sucesso!')" value="Cadastrar!"
+          />
+        </form>
       </div>
     </main>
     <footer class="footer">
@@ -56,5 +57,7 @@
         </p>
       </div>
     </footer>
+    <script src="js/dados_botanicos.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
