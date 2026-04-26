@@ -60,9 +60,32 @@ function renderizarInterface(valoresIniciais = {}) {
       select.appendChild(el);
     });
 
-    div.appendChild(select);
-    container.appendChild(div);
-  }
+        const div = document.createElement('div');
+        div.className = 'filter-item';
+
+        const label = document.createElement('label');
+        label.textContent = categoria.label;
+
+        const select = document.createElement('select');
+        select.id = `input_${chave}`; // ID padrão para ler depois
+        select.multiple = true;
+
+        const optDefault = document.createElement('option');
+        optDefault.value = "";
+        optDefault.textContent = "Não observado / Qualquer";
+        select.appendChild(optDefault);
+
+        categoria.opcoes.forEach(opcao => {
+            const el = document.createElement('option');
+            el.value = opcao.valor;
+            el.textContent = opcao.texto;
+            select.appendChild(el);
+        });
+
+        div.appendChild(label);
+        div.appendChild(select);
+        container.appendChild(div);
+    }
 }
 
 function lerCriterios() {
