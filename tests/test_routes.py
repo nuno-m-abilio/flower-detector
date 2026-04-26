@@ -1,8 +1,3 @@
-"""
-tests/test_routes.py — Testes unitários com pytest
-Cobre: consulta, CRUD, probabilidade, explicabilidade e rotas Flask
-"""
-
 import pytest
 import sys
 import os
@@ -50,7 +45,7 @@ def limpar_flor_teste():
 
 
 # ---------------------------------------------------------------------------
-# TESTES — BASE DE CONHECIMENTO E DOMÍNIO
+# TESTES - BASE DE CONHECIMENTO E DOMÍNIO
 # ---------------------------------------------------------------------------
 
 class TestDominio:
@@ -76,7 +71,7 @@ class TestDominio:
 
 
 # ---------------------------------------------------------------------------
-# TESTES — CRUD
+# TESTES - CRUD
 # ---------------------------------------------------------------------------
 
 class TestCRUD:
@@ -168,7 +163,7 @@ class TestCRUD:
 
 
 # ---------------------------------------------------------------------------
-# TESTES — PROBABILIDADE / COMPATIBILIDADE
+# TESTES - PROBABILIDADE / COMPATIBILIDADE
 # ---------------------------------------------------------------------------
 
 class TestProbabilidade:
@@ -396,22 +391,3 @@ class TestRotas:
     def test_rota_excluir_flor_inexistente(self, client):
         resp = client.delete("/flores/flor_xyz_nao_existe")
         assert resp.status_code == 404
-
-    def test_sessao_iniciar(self, client):
-        with client.session_transaction() as sess:
-            sess.clear()
-        resp = client.post("/sessao/iniciar")
-        assert resp.status_code == 200
-        data = resp.get_json()
-        assert "proximo_atributo" in data
-
-    def test_sessao_responder(self, client):
-        client.post("/sessao/iniciar")
-        resp = client.post(
-            "/sessao/responder",
-            json={"atributo": "cor_petala", "valores": ["amarelo_dourado"]},
-        )
-        assert resp.status_code == 200
-        data = resp.get_json()
-        assert "estado" in data
-        assert data["estado"] in ("continuar", "conclusao")

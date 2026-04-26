@@ -1,8 +1,3 @@
-"""
-app.py — Servidor Flask para o Sistema Especialista de Identificação de Flores
-Integra Python (Flask) com SWI-Prolog (via pyswip) como motor de inferência lógica.
-"""
-
 from flask import Flask, request, jsonify, render_template, session
 from flask_cors import CORS
 from pyswip import Prolog, Functor, Variable, Atom, call
@@ -11,21 +6,24 @@ import os
 import re
 
 # ---------------------------------------------------------------------------
-# INICIALIZAÇÃO
+# INICIALIZAÇÃO - Faz a inicialização do Flask, do CORS para integrar front e
+# back e da base em Prolog 
 # ---------------------------------------------------------------------------
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
+
 CORS(app)
 
 prolog = Prolog()
-
 BASE_PL = os.path.join(os.path.dirname(__file__), "flores.pl")
 prolog.consult(BASE_PL)
 
 
 # ---------------------------------------------------------------------------
-# HELPERS DE CONVERSÃO PYSWIP → PYTHON
+# HELPERS DE CONVERSÃO PYSWIP PARA PYTHON - Funções simples para converter os
+# termos do Pyswip (bibioteca usada para conectar python e SWI-Prolog) para o
+# Python de fato com padronização
 # ---------------------------------------------------------------------------
 
 def _term_to_str(term) -> str:
@@ -57,7 +55,9 @@ def _normalize(name: str) -> str:
 
 
 # ---------------------------------------------------------------------------
-# FUNÇÕES DE DOMÍNIO — CARACTERÍSTICAS
+# FUNÇÕES DE DOMÍNIO DE CARACTERÍSTICAS - Funções que retornam dicionários
+# para termos aqui no python quais são todas as catracterísticas e qual a
+# hierarquia das flores
 # ---------------------------------------------------------------------------
 
 def listar_atributos() -> dict:
@@ -86,7 +86,9 @@ def listar_subclasses_cor() -> dict:
 
 
 # ---------------------------------------------------------------------------
-# FUNÇÕES DE DOMÍNIO — FLORES (CRUD)
+# FUNÇÕES DE DOMÍNIO DE FLORES - As funções dos CRUDs em si, desde algumas de
+# consulta para obter todas as flores cadastradas, as características de uma
+# flor em si, ou as próprias funções de inserir, editar e excluir
 # ---------------------------------------------------------------------------
 
 def listar_flores() -> list[str]:
@@ -230,7 +232,9 @@ def excluir_flor(nome: str) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# PROBABILIDADE E CONSULTA / DIAGNÓSTICO
+# PROBABILIDADE E CONSULTA / DIAGNÓSTICO - Aqui são as funções relacionadas à
+# busca, com a complexidade de ter que filtrar pela maior compatibilidade (que
+# inclusive é calculado com Jaccard)
 # ---------------------------------------------------------------------------
 
 def _expandir_cor(valor: str) -> list[str]:
@@ -355,7 +359,9 @@ def consultar_flor_principal(criterios: dict[str, list[str]]) -> dict | None:
 
 
 # ---------------------------------------------------------------------------
-# JUSTIFICATIVA / EXPLICABILIDADE
+# JUSTIFICATIVA / EXPLICABILIDADE - Funções que explicam com mais detalhes as
+# questões referentes à busca, respondendo as perguntas da especificação do
+# trabalho
 # ---------------------------------------------------------------------------
 
 def justificar_resultado(flor: str, criterios: dict[str, list[str]]) -> dict:
@@ -382,7 +388,7 @@ def justificar_resultado(flor: str, criterios: dict[str, list[str]]) -> dict:
         f"'{flor}' foi sugerida com {compat['percentual']} de compatibilidade."
     )
 
-    # Acertos
+    # Acertos - Aparece tanto na busca quanto na sugestão
     if compat["acertos"]:
         linhas_explicacao.append("\n✅ Características que CONFIRMAM a sugestão:")
         for a in compat["acertos"]:
@@ -397,7 +403,7 @@ def justificar_resultado(flor: str, criterios: dict[str, list[str]]) -> dict:
                     f"(hierarquia de cor)"
                 )
 
-    # Faltas
+    # Faltas - Aparece na busca, mas não na sugestão
     if compat["faltas"]:
         linhas_explicacao.append(
             "\n❌ Características INFORMADAS que NÃO foram encontradas "
@@ -408,7 +414,7 @@ def justificar_resultado(flor: str, criterios: dict[str, list[str]]) -> dict:
                 f"  • {f['atributo']} = {f['valor']} (ausente no perfil)"
             )
 
-    # Extras
+    # Extras - Não aparece na busca, mas sim na sugestão
     if compat["extras_da_flor"]:
         linhas_explicacao.append(
             "\nℹ️  Características da flor que NÃO foram consultadas:"
@@ -450,7 +456,8 @@ def por_que_perguntou(atributo: str) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# ROTAS FLASK
+# ROTAS FLASK - Renderiza o template inicial do index.html e depois defini as
+# rotas para que cada função possa ser processada pelo front
 # ---------------------------------------------------------------------------
 
 DISCLAIMER = (
@@ -574,7 +581,7 @@ def rota_por_que_perguntou(atributo: str):
     return jsonify(por_que_perguntou(atributo))
 
 
-# ---- CRUD —— Adição --------------------------------------------------------
+# ---- CRUD - Adição --------------------------------------------------------
 
 @app.route("/flores", methods=["POST"])
 def rota_adicionar_flor():
@@ -607,7 +614,7 @@ def rota_adicionar_flor():
     return jsonify(resultado), 201
 
 
-# ---- CRUD — Edição ---------------------------------------------------------
+# ---- CRUD - Edição ---------------------------------------------------------
 
 @app.route("/flores/<nome>", methods=["PATCH"])
 def rota_editar_flor(nome: str):
@@ -634,7 +641,7 @@ def rota_editar_flor(nome: str):
     return jsonify(resultado)
 
 
-# ---- CRUD — Exclusão -------------------------------------------------------
+# ---- CRUD - Exclusão -------------------------------------------------------
 
 @app.route("/flores/<nome>", methods=["DELETE"])
 def rota_excluir_flor(nome: str):
@@ -646,116 +653,9 @@ def rota_excluir_flor(nome: str):
 
     return jsonify(resultado)
 
-
 # ---------------------------------------------------------------------------
-# SESSÃO — modo Akinator (perguntas incrementais)
-# ---------------------------------------------------------------------------
-
-@app.route("/sessao/iniciar", methods=["POST"])
-def sessao_iniciar():
-    """
-    Inicia uma sessão de identificação incremental (modo Akinator).
-    Reseta os critérios acumulados e sugere o primeiro atributo a perguntar.
-    """
-    session["criterios"] = {}
-    session["historico"] = []
-
-    proximo = _sugerir_proximo_atributo({})
-    return jsonify({
-        "mensagem": "Sessão iniciada. Responda as perguntas para identificar a flor.",
-        "proximo_atributo": proximo,
-        "aviso": DISCLAIMER,
-    })
-
-
-@app.route("/sessao/responder", methods=["POST"])
-def sessao_responder():
-    """
-    Recebe uma resposta incremental e devolve o próximo atributo a perguntar
-    ou o resultado final se a confiança for suficiente.
-    Body JSON: {"atributo": "cor_petala", "valores": ["amarelo"]}
-    """
-    dados = request.get_json(force=True) or {}
-    atrib = _normalize(dados.get("atributo", ""))
-    valores = dados.get("valores", [])
-
-    if not atrib or not valores:
-        return jsonify({"erro": "Informe 'atributo' e 'valores'."}), 400
-
-    criterios = session.get("criterios", {})
-    criterios[atrib] = valores
-    session["criterios"] = criterios
-
-    historico = session.get("historico", [])
-    historico.append({"atributo": atrib, "valores": valores})
-    session["historico"] = historico
-
-    resultados = consultar_flores(criterios, threshold=0.01, top_n=5)
-
-    # Confiança alta: melhor resultado tem score ≥ 0.85 e é bem destacado
-    if resultados and resultados[0]["score"] >= 0.85:
-        melhor = resultados[0]
-        return jsonify({
-            "estado": "conclusao",
-            "resultado": melhor,
-            "alternativas": resultados[1:],
-            "historico": historico,
-            "aviso": DISCLAIMER,
-        })
-
-    proximo = _sugerir_proximo_atributo(criterios)
-
-    if not proximo:
-        return jsonify({
-            "estado": "conclusao",
-            "resultado": resultados[0] if resultados else None,
-            "alternativas": resultados[1:] if len(resultados) > 1 else [],
-            "historico": historico,
-            "aviso": DISCLAIMER,
-        })
-
-    return jsonify({
-        "estado": "continuar",
-        "candidatos_atuais": resultados[:3],
-        "proximo_atributo": proximo,
-        "historico": historico,
-    })
-
-
-def _sugerir_proximo_atributo(criterios_ja_usados: dict) -> dict | None:
-    """
-    Sugere o próximo atributo mais discriminatório para perguntar.
-    Critério: atributo que aparece no maior número de flores candidatas
-    e ainda não foi perguntado.
-    """
-    atribs_usados = set(criterios_ja_usados.keys())
-
-    # Conta ocorrências de cada atributo ainda não perguntado
-    contagens: dict[str, int] = {}
-    resultados = _query_list("caracteristica(_, Atributo, _)")
-    for r in resultados:
-        atrib = _term_to_str(r["Atributo"])
-        if atrib not in atribs_usados:
-            contagens[atrib] = contagens.get(atrib, 0) + 1
-
-    if not contagens:
-        return None
-
-    melhor_atrib = max(contagens, key=lambda a: contagens[a])
-
-    # Busca valores possíveis para o atributo
-    vals_res = _query_list(f"dominio_atributo(Valor, {melhor_atrib})")
-    valores = [_term_to_str(v["Valor"]) for v in vals_res]
-
-    return {
-        "atributo": melhor_atrib,
-        "valores_possiveis": valores,
-        "pergunta": f"Qual é o valor de '{melhor_atrib}' desta flor?",
-    }
-
-
-# ---------------------------------------------------------------------------
-# ENTRY POINT
+# ENTRY POINT - Quando este arquivo foi rodado, o back será inicializado e os
+# prints das informações principais serão mostrados no terminal
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
