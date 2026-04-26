@@ -10,7 +10,7 @@ const dicionarioBotanico = {
     label: "Cor das Pétalas",
     multiselect: true,
     opcoes: [
-      // Amarelos
+      { valor: "amarelo",          texto: "Amarelo"},
       { valor: "amarelo_palha",    texto: "Amarelo-palha" },
       { valor: "amarelo_creme",    texto: "Amarelo-creme" },
       { valor: "amarelo_limao",    texto: "Amarelo-limão" },
@@ -18,12 +18,16 @@ const dicionarioBotanico = {
       { valor: "amarelo_ambar",    texto: "Amarelo-âmbar" },
       { valor: "amarelo_mostarda", texto: "Amarelo-mostarda" },
       // Laranjas
+      
+      { valor: "laranja",          texto: "Laranja"},
       { valor: "laranja_pessego",  texto: "Laranja-pêssego" },
       { valor: "laranja_claro",    texto: "Laranja-claro" },
       { valor: "laranja_vivo",     texto: "Laranja-vivo" },
       { valor: "laranja_cobre",    texto: "Laranja-cobre" },
       { valor: "laranja_queimado", texto: "Laranja-queimado" },
       // Vermelhos
+      
+      { valor: "vermelho",           texto: "Vermelho"},
       { valor: "vermelho_rosado",    texto: "Vermelho-rosado" },
       { valor: "vermelho_cereja",    texto: "Vermelho-cereja" },
       { valor: "vermelho_escarlate", texto: "Vermelho-escarlate" },
@@ -31,6 +35,7 @@ const dicionarioBotanico = {
       { valor: "vermelho_bordeaux",  texto: "Vermelho-bordeaux" },
       { valor: "vermelho_enegrecido",texto: "Vermelho-enegrecido" },
       // Rosas
+      { valor: "rosa",         texto: "Rosa"},
       { valor: "rosa_bebe",    texto: "Rosa-bebê" },
       { valor: "rosa_quartzo", texto: "Rosa-quartzo" },
       { valor: "rosa_chiclete",texto: "Rosa-chiclete" },
@@ -39,6 +44,7 @@ const dicionarioBotanico = {
       { valor: "rosa_fucsia",  texto: "Rosa-fúcsia" },
       { valor: "rosa_magenta", texto: "Rosa-magenta" },
       // Roxos
+      { valor: "roxo",             texto: "Roxo"},
       { valor: "lilas",            texto: "Lilás" },
       { valor: "lavanda",          texto: "Lavanda" },
       { valor: "violeta_claro",    texto: "Violeta-claro" },
@@ -47,17 +53,20 @@ const dicionarioBotanico = {
       { valor: "roxo_escuro",      texto: "Roxo-escuro" },
       { valor: "roxo_enegrecido",  texto: "Roxo-enegrecido" },
       // Azuis
+      { valor: "azul",            texto: "Azul"},
       { valor: "azul_celeste",    texto: "Azul-celeste" },
       { valor: "azul_periwinkle", texto: "Azul-periwinkle" },
       { valor: "azul_medio",      texto: "Azul-médio" },
       { valor: "azul_cobalto",    texto: "Azul-cobalto" },
       { valor: "azul_indigo",     texto: "Azul-índigo" },
       // Verdes
+      { valor: "verde",        texto: "Verde"},
       { valor: "verde_claro",  texto: "Verde-claro" },
       { valor: "verde_menta",  texto: "Verde-menta" },
       { valor: "verde_medio",  texto: "Verde-médio" },
       { valor: "verde_escuro", texto: "Verde-escuro" },
       // Brancos
+      { valor: "branco",             texto: "Branco"},
       { valor: "branco_puro",        texto: "Branco-puro" },
       { valor: "branco_creme",       texto: "Branco-creme" },
       { valor: "branco_esverdeado",  texto: "Branco-esverdeado" },
@@ -196,7 +205,7 @@ const dicionarioBotanico = {
 
   polinizacao: {
     label: "Polinizadores",
-    multiselect: true,          // ← MÚLTIPLA SELEÇÃO
+    multiselect: true,
     opcoes: [
       { valor: "abelhas",     texto: "Abelhas" },
       { valor: "borboletas",  texto: "Borboletas" },
@@ -361,7 +370,7 @@ const dicionarioBotanico = {
 
   epoca_floracao: {
     label: "Época de Floração",
-    multiselect: true,          // ← MÚLTIPLA SELEÇÃO
+    multiselect: true,
     opcoes: [
       { valor: "primavera",     texto: "Primavera" },
       { valor: "verao",         texto: "Verão" },
