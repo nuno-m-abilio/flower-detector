@@ -803,6 +803,550 @@ caracteristica(anthurio, textura_folha,     lisa_brilhante).
 caracteristica(anthurio, simetria,          actinomorfa).
 caracteristica(anthurio, sexualidade_flor,  perfeita).
 
+% ------------------------------------------------------------
+% JASMIM (Jasminum officinale)
+% ------------------------------------------------------------
+caracteristica(jasmim, cor_petala,         branco_puro).
+caracteristica(jasmim, formato_corola,     estrelada).
+caracteristica(jasmim, disposicao_corola,  simples_disposicao).
+caracteristica(jasmim, numero_petalas,     cinco).
+caracteristica(jasmim, forma_petala,       arredondada).
+caracteristica(jasmim, textura_petala,     lisa).
+caracteristica(jasmim, inflorescencia,     cimeira).
+caracteristica(jasmim, polinizacao,        mariposas).
+caracteristica(jasmim, polinizacao,        abelhas).
+caracteristica(jasmim, intensidade_aroma,  muito_intenso).
+caracteristica(jasmim, categoria_aroma,    floral_doce).
+caracteristica(jasmim, periodo_aroma,      noturno_aroma).
+caracteristica(jasmim, porte_planta,       arbustiva).
+caracteristica(jasmim, ciclo_vida,         perene_sempre_verde).
+caracteristica(jasmim, epoca_floracao,     verao).
+caracteristica(jasmim, habitat_origem,     temperado).
+caracteristica(jasmim, consistencia_caule, lenhoso_arbusto).
+caracteristica(jasmim, toxicidade,         nao_toxica).
+caracteristica(jasmim, formato_limbo,      oval).
+caracteristica(jasmim, margem_limbo,       inteira).
+caracteristica(jasmim, textura_folha,      lisa_brilhante).
+caracteristica(jasmim, simetria,           actinomorfa).
+caracteristica(jasmim, sexualidade_flor,   perfeita).
+caracteristica(jasmim, merismo,            pentamera).
+ 
+% ------------------------------------------------------------
+% GÉRBERA (Gerbera jamesonii)
+% ------------------------------------------------------------
+caracteristica(gerbera, cor_petala,         laranja_vivo).
+caracteristica(gerbera, formato_corola,     capitular).
+caracteristica(gerbera, disposicao_corola,  simples_disposicao).
+caracteristica(gerbera, numero_petalas,     treze_a_vinteuma).
+caracteristica(gerbera, forma_petala,       lanceolada_petala).
+caracteristica(gerbera, textura_petala,     lisa).
+caracteristica(gerbera, inflorescencia,     capitulo).
+caracteristica(gerbera, polinizacao,        abelhas).
+caracteristica(gerbera, polinizacao,        borboletas).
+caracteristica(gerbera, intensidade_aroma,  inodora).
+caracteristica(gerbera, porte_planta,       media).
+caracteristica(gerbera, ciclo_vida,         perene_sempre_verde).
+caracteristica(gerbera, epoca_floracao,     floracao_longa).
+caracteristica(gerbera, habitat_origem,     subtropical).
+caracteristica(gerbera, consistencia_caule, herbaceo).
+caracteristica(gerbera, toxicidade,         nao_toxica).
+caracteristica(gerbera, formato_limbo,      lobada).
+caracteristica(gerbera, margem_limbo,       dentada).
+caracteristica(gerbera, textura_folha,      pubescente).
+caracteristica(gerbera, simetria,           actinomorfa).
+caracteristica(gerbera, sexualidade_flor,   perfeita).
+ 
+% ------------------------------------------------------------
+% BEGÔNIA (Begonia × hiemalis)
+% ------------------------------------------------------------
+caracteristica(begonia, cor_petala,         rosa_coral).
+caracteristica(begonia, formato_corola,     rotacea).
+caracteristica(begonia, disposicao_corola,  dupla).
+caracteristica(begonia, numero_petalas,     quatro).
+caracteristica(begonia, forma_petala,       arredondada).
+caracteristica(begonia, textura_petala,     cerosa_petala).
+caracteristica(begonia, inflorescencia,     cimeira).
+caracteristica(begonia, polinizacao,        abelhas).
+caracteristica(begonia, polinizacao,        besouros).
+caracteristica(begonia, intensidade_aroma,  inodora).
+caracteristica(begonia, porte_planta,       rasteira).
+caracteristica(begonia, ciclo_vida,         perene_sempre_verde).
+caracteristica(begonia, epoca_floracao,     floracao_longa).
+caracteristica(begonia, habitat_origem,     tropical).
+caracteristica(begonia, consistencia_caule, herbaceo).
+caracteristica(begonia, toxicidade,         toxica_para_animais).
+caracteristica(begonia, formato_limbo,      cordada).
+caracteristica(begonia, margem_limbo,       serrada).
+caracteristica(begonia, textura_folha,      lisa_brilhante).
+caracteristica(begonia, simetria,           zigomorfa).
+caracteristica(begonia, sexualidade_flor,   imperfeita_pistilada).
+caracteristica(begonia, sexo_planta,        monoica).
+caracteristica(begonia, merismo,            tetramera).
+ 
+% ------------------------------------------------------------
+% DÁLIA (Dahlia pinnata)
+% ------------------------------------------------------------
+caracteristica(dalia, cor_petala,         vermelho_carmim).
+caracteristica(dalia, formato_corola,     capitular).
+caracteristica(dalia, disposicao_corola,  dupla).
+caracteristica(dalia, numero_petalas,     numerosas).
+caracteristica(dalia, forma_petala,       lanceolada_petala).
+caracteristica(dalia, textura_petala,     lisa).
+caracteristica(dalia, inflorescencia,     capitulo).
+caracteristica(dalia, polinizacao,        abelhas).
+caracteristica(dalia, polinizacao,        borboletas).
+caracteristica(dalia, intensidade_aroma,  inodora).
+caracteristica(dalia, porte_planta,       alta).
+caracteristica(dalia, ciclo_vida,         geofita).
+caracteristica(dalia, epoca_floracao,     verao).
+caracteristica(dalia, habitat_origem,     subtropical).
+caracteristica(dalia, consistencia_caule, herbaceo).
+caracteristica(dalia, caule_modificado,   tuberculo).
+caracteristica(dalia, toxicidade,         nao_toxica).
+caracteristica(dalia, formato_limbo,      composta_imparipinada).
+caracteristica(dalia, margem_limbo,       dentada).
+caracteristica(dalia, textura_folha,      lisa_opaca).
+caracteristica(dalia, simetria,           actinomorfa).
+caracteristica(dalia, sexualidade_flor,   perfeita).
+ 
+% ------------------------------------------------------------
+% HIBISCO (Hibiscus rosa-sinensis)
+% ------------------------------------------------------------
+caracteristica(hibisco, cor_petala,         vermelho_escarlate).
+caracteristica(hibisco, formato_corola,     infundibuliforme).
+caracteristica(hibisco, disposicao_corola,  simples_disposicao).
+caracteristica(hibisco, numero_petalas,     cinco).
+caracteristica(hibisco, forma_petala,       arredondada).
+caracteristica(hibisco, textura_petala,     lisa).
+caracteristica(hibisco, inflorescencia,     flor_solitaria).
+caracteristica(hibisco, polinizacao,        passaros).
+caracteristica(hibisco, polinizacao,        abelhas).
+caracteristica(hibisco, intensidade_aroma,  inodora).
+caracteristica(hibisco, porte_planta,       arbustiva).
+caracteristica(hibisco, ciclo_vida,         perene_sempre_verde).
+caracteristica(hibisco, epoca_floracao,     floracao_longa).
+caracteristica(hibisco, habitat_origem,     tropical).
+caracteristica(hibisco, consistencia_caule, lenhoso_arbusto).
+caracteristica(hibisco, toxicidade,         nao_toxica).
+caracteristica(hibisco, formato_limbo,      oval).
+caracteristica(hibisco, margem_limbo,       serrada).
+caracteristica(hibisco, textura_folha,      lisa_brilhante).
+caracteristica(hibisco, simetria,           actinomorfa).
+caracteristica(hibisco, sexualidade_flor,   perfeita).
+caracteristica(hibisco, merismo,            pentamera).
+ 
+% ------------------------------------------------------------
+% CALÊNDULA (Calendula officinalis)
+% ------------------------------------------------------------
+caracteristica(calendula, cor_petala,         laranja_vivo).
+caracteristica(calendula, formato_corola,     capitular).
+caracteristica(calendula, disposicao_corola,  simples_disposicao).
+caracteristica(calendula, numero_petalas,     treze_a_vinteuma).
+caracteristica(calendula, forma_petala,       lanceolada_petala).
+caracteristica(calendula, textura_petala,     lisa).
+caracteristica(calendula, inflorescencia,     capitulo).
+caracteristica(calendula, polinizacao,        abelhas).
+caracteristica(calendula, polinizacao,        borboletas).
+caracteristica(calendula, intensidade_aroma,  moderado).
+caracteristica(calendula, categoria_aroma,    especiado).
+caracteristica(calendula, periodo_aroma,      diurno).
+caracteristica(calendula, porte_planta,       media).
+caracteristica(calendula, ciclo_vida,         anual).
+caracteristica(calendula, epoca_floracao,     primavera).
+caracteristica(calendula, habitat_origem,     mediterraneo).
+caracteristica(calendula, consistencia_caule, herbaceo).
+caracteristica(calendula, toxicidade,         nao_toxica).
+caracteristica(calendula, formato_limbo,      espatulada_limbo).
+caracteristica(calendula, margem_limbo,       inteira).
+caracteristica(calendula, textura_folha,      pubescente).
+caracteristica(calendula, simetria,           actinomorfa).
+caracteristica(calendula, sexualidade_flor,   perfeita).
+ 
+% ------------------------------------------------------------
+% ÍRIS (Iris germanica)
+% ------------------------------------------------------------
+caracteristica(iris, cor_petala,         violeta_intenso).
+caracteristica(iris, formato_corola,     zigomorfa).
+caracteristica(iris, disposicao_corola,  simples_disposicao).
+caracteristica(iris, numero_petalas,     seis).
+caracteristica(iris, forma_petala,       ondulada_petala).
+caracteristica(iris, textura_petala,     velutinosa).
+caracteristica(iris, inflorescencia,     racemo).
+caracteristica(iris, polinizacao,        abelhas).
+caracteristica(iris, polinizacao,        borboletas).
+caracteristica(iris, intensidade_aroma,  moderado).
+caracteristica(iris, categoria_aroma,    floral_doce).
+caracteristica(iris, periodo_aroma,      diurno).
+caracteristica(iris, porte_planta,       media).
+caracteristica(iris, ciclo_vida,         geofita).
+caracteristica(iris, epoca_floracao,     primavera).
+caracteristica(iris, habitat_origem,     temperado).
+caracteristica(iris, consistencia_caule, herbaceo).
+caracteristica(iris, caule_modificado,   rizoma).
+caracteristica(iris, toxicidade,         toxica_para_animais).
+caracteristica(iris, formato_limbo,      linear_limbo).
+caracteristica(iris, margem_limbo,       inteira).
+caracteristica(iris, textura_folha,      lisa_opaca).
+caracteristica(iris, simetria,           zigomorfa).
+caracteristica(iris, sexualidade_flor,   perfeita).
+caracteristica(iris, merismo,            trimera).
+ 
+% ------------------------------------------------------------
+% HELICÔNIA (Heliconia psittacorum)
+% ------------------------------------------------------------
+caracteristica(heliconia, cor_petala,         laranja_vivo).
+caracteristica(heliconia, formato_corola,     tubular).
+caracteristica(heliconia, disposicao_corola,  simples_disposicao).
+caracteristica(heliconia, numero_petalas,     tres).
+caracteristica(heliconia, forma_petala,       lanceolada_petala).
+caracteristica(heliconia, textura_petala,     cerosa_petala).
+caracteristica(heliconia, inflorescencia,     espata_espadice).
+caracteristica(heliconia, polinizacao,        passaros).
+caracteristica(heliconia, intensidade_aroma,  inodora).
+caracteristica(heliconia, porte_planta,       alta).
+caracteristica(heliconia, ciclo_vida,         perene_sempre_verde).
+caracteristica(heliconia, epoca_floracao,     floracao_longa).
+caracteristica(heliconia, habitat_origem,     tropical).
+caracteristica(heliconia, consistencia_caule, herbaceo).
+caracteristica(heliconia, caule_modificado,   rizoma).
+caracteristica(heliconia, toxicidade,         nao_toxica).
+caracteristica(heliconia, formato_limbo,      oval).
+caracteristica(heliconia, margem_limbo,       inteira).
+caracteristica(heliconia, textura_folha,      lisa_brilhante).
+caracteristica(heliconia, simetria,           zigomorfa).
+caracteristica(heliconia, sexualidade_flor,   perfeita).
+caracteristica(heliconia, merismo,            trimera).
+
+% ------------------------------------------------------------
+% PETÚNIA (Petunia × hybrida)
+% ------------------------------------------------------------
+caracteristica(petunia, cor_petala,         rosa_fucsia).
+caracteristica(petunia, formato_corola,     infundibuliforme).
+caracteristica(petunia, disposicao_corola,  simples_disposicao).
+caracteristica(petunia, numero_petalas,     cinco).
+caracteristica(petunia, forma_petala,       ondulada_petala).
+caracteristica(petunia, textura_petala,     velutinosa).
+caracteristica(petunia, inflorescencia,     flor_solitaria).
+caracteristica(petunia, polinizacao,        mariposas).
+caracteristica(petunia, polinizacao,        abelhas).
+caracteristica(petunia, intensidade_aroma,  suave).
+caracteristica(petunia, categoria_aroma,    floral_doce).
+caracteristica(petunia, periodo_aroma,      noturno_aroma).
+caracteristica(petunia, porte_planta,       rasteira).
+caracteristica(petunia, ciclo_vida,         anual).
+caracteristica(petunia, epoca_floracao,     floracao_longa).
+caracteristica(petunia, habitat_origem,     subtropical).
+caracteristica(petunia, consistencia_caule, herbaceo).
+caracteristica(petunia, superficie_caule,   piloso).
+caracteristica(petunia, toxicidade,         nao_toxica).
+caracteristica(petunia, formato_limbo,      oval).
+caracteristica(petunia, margem_limbo,       inteira).
+caracteristica(petunia, textura_folha,      viscosa).
+caracteristica(petunia, simetria,           actinomorfa).
+caracteristica(petunia, sexualidade_flor,   perfeita).
+caracteristica(petunia, merismo,            pentamera).
+ 
+% ------------------------------------------------------------
+% BOUGAINVILLEA / PRIMAVERA (Bougainvillea spectabilis)
+% ------------------------------------------------------------
+caracteristica(primavera, cor_petala,         rosa_magenta).
+caracteristica(primavera, formato_corola,     tubular).
+caracteristica(primavera, disposicao_corola,  simples_disposicao).
+caracteristica(primavera, numero_petalas,     tres).
+caracteristica(primavera, forma_petala,       lanceolada_petala).
+caracteristica(primavera, textura_petala,     papilosa).
+caracteristica(primavera, inflorescencia,     cimeira).
+caracteristica(primavera, polinizacao,        passaros).
+caracteristica(primavera, polinizacao,        abelhas).
+caracteristica(primavera, intensidade_aroma,  inodora).
+caracteristica(primavera, porte_planta,       arbustiva).
+caracteristica(primavera, ciclo_vida,         perene_sempre_verde).
+caracteristica(primavera, epoca_floracao,     floracao_longa).
+caracteristica(primavera, habitat_origem,     tropical).
+caracteristica(primavera, consistencia_caule, lenhoso_arbusto).
+caracteristica(primavera, superficie_caule,   espinhoso).
+caracteristica(primavera, folha_modificada,   bractea).
+caracteristica(primavera, toxicidade,         suco_irritante).
+caracteristica(primavera, formato_limbo,      oval).
+caracteristica(primavera, margem_limbo,       inteira).
+caracteristica(primavera, textura_folha,      pubescente).
+caracteristica(primavera, simetria,           actinomorfa).
+caracteristica(primavera, sexualidade_flor,   perfeita).
+ 
+% ------------------------------------------------------------
+% ZÍNIA (Zinnia elegans)
+% ------------------------------------------------------------
+caracteristica(zinia, cor_petala,         vermelho_escarlate).
+caracteristica(zinia, formato_corola,     capitular).
+caracteristica(zinia, disposicao_corola,  dupla).
+caracteristica(zinia, numero_petalas,     oito_a_doze).
+caracteristica(zinia, forma_petala,       espatulada_petala).
+caracteristica(zinia, textura_petala,     lisa).
+caracteristica(zinia, inflorescencia,     capitulo).
+caracteristica(zinia, polinizacao,        borboletas).
+caracteristica(zinia, polinizacao,        abelhas).
+caracteristica(zinia, intensidade_aroma,  inodora).
+caracteristica(zinia, porte_planta,       media).
+caracteristica(zinia, ciclo_vida,         anual).
+caracteristica(zinia, epoca_floracao,     verao).
+caracteristica(zinia, habitat_origem,     subtropical).
+caracteristica(zinia, consistencia_caule, herbaceo).
+caracteristica(zinia, superficie_caule,   piloso).
+caracteristica(zinia, toxicidade,         nao_toxica).
+caracteristica(zinia, formato_limbo,      oval).
+caracteristica(zinia, margem_limbo,       inteira).
+caracteristica(zinia, textura_folha,      rugosa).
+caracteristica(zinia, simetria,           actinomorfa).
+caracteristica(zinia, sexualidade_flor,   perfeita).
+ 
+% ------------------------------------------------------------
+% MAGNÓLIA (Magnolia grandiflora)
+% ------------------------------------------------------------
+caracteristica(magnolia, cor_petala,         branco_creme).
+caracteristica(magnolia, formato_corola,     rotacea).
+caracteristica(magnolia, disposicao_corola,  simples_disposicao).
+caracteristica(magnolia, numero_petalas,     seis).
+caracteristica(magnolia, forma_petala,       arredondada).
+caracteristica(magnolia, textura_petala,     cerosa_petala).
+caracteristica(magnolia, inflorescencia,     flor_solitaria).
+caracteristica(magnolia, polinizacao,        besouros).
+caracteristica(magnolia, intensidade_aroma,  muito_intenso).
+caracteristica(magnolia, categoria_aroma,    floral_doce).
+caracteristica(magnolia, periodo_aroma,      diurno).
+caracteristica(magnolia, porte_planta,       arborea).
+caracteristica(magnolia, ciclo_vida,         perene_sempre_verde).
+caracteristica(magnolia, epoca_floracao,     primavera).
+caracteristica(magnolia, habitat_origem,     temperado).
+caracteristica(magnolia, consistencia_caule, lenhoso_arvore).
+caracteristica(magnolia, toxicidade,         nao_toxica).
+caracteristica(magnolia, formato_limbo,      eliptica).
+caracteristica(magnolia, margem_limbo,       inteira).
+caracteristica(magnolia, textura_folha,      lisa_brilhante).
+caracteristica(magnolia, simetria,           actinomorfa).
+caracteristica(magnolia, sexualidade_flor,   perfeita).
+caracteristica(magnolia, merismo,            trimera).
+ 
+% ------------------------------------------------------------
+% PAPOULA (Papaver rhoeas)
+% ------------------------------------------------------------
+caracteristica(papoula, cor_petala,         vermelho_escarlate).
+caracteristica(papoula, formato_corola,     rotacea).
+caracteristica(papoula, disposicao_corola,  simples_disposicao).
+caracteristica(papoula, numero_petalas,     quatro).
+caracteristica(papoula, forma_petala,       arredondada).
+caracteristica(papoula, textura_petala,     translucida).
+caracteristica(papoula, inflorescencia,     flor_solitaria).
+caracteristica(papoula, polinizacao,        abelhas).
+caracteristica(papoula, polinizacao,        besouros).
+caracteristica(papoula, intensidade_aroma,  inodora).
+caracteristica(papoula, porte_planta,       media).
+caracteristica(papoula, ciclo_vida,         anual).
+caracteristica(papoula, epoca_floracao,     primavera).
+caracteristica(papoula, habitat_origem,     mediterraneo).
+caracteristica(papoula, consistencia_caule, herbaceo).
+caracteristica(papoula, superficie_caule,   piloso).
+caracteristica(papoula, toxicidade,         altamente_venenosa).
+caracteristica(papoula, formato_limbo,      penatilobada).
+caracteristica(papoula, margem_limbo,       serrada).
+caracteristica(papoula, textura_folha,      pubescente).
+caracteristica(papoula, simetria,           actinomorfa).
+caracteristica(papoula, sexualidade_flor,   perfeita).
+caracteristica(papoula, merismo,            tetramera).
+ 
+% ------------------------------------------------------------
+% FLOR-DE-LIS / AGAPANTO (Agapanthus africanus)
+% ------------------------------------------------------------
+caracteristica(agapanto, cor_petala,         azul_medio).
+caracteristica(agapanto, formato_corola,     infundibuliforme).
+caracteristica(agapanto, disposicao_corola,  simples_disposicao).
+caracteristica(agapanto, numero_petalas,     seis).
+caracteristica(agapanto, forma_petala,       lanceolada_petala).
+caracteristica(agapanto, textura_petala,     lisa).
+caracteristica(agapanto, inflorescencia,     umbela).
+caracteristica(agapanto, polinizacao,        abelhas).
+caracteristica(agapanto, polinizacao,        passaros).
+caracteristica(agapanto, intensidade_aroma,  suave).
+caracteristica(agapanto, categoria_aroma,    floral_doce).
+caracteristica(agapanto, porte_planta,       media).
+caracteristica(agapanto, ciclo_vida,         perene_sempre_verde).
+caracteristica(agapanto, epoca_floracao,     verao).
+caracteristica(agapanto, habitat_origem,     subtropical).
+caracteristica(agapanto, consistencia_caule, herbaceo).
+caracteristica(agapanto, caule_modificado,   rizoma).
+caracteristica(agapanto, toxicidade,         toxica_para_animais).
+caracteristica(agapanto, formato_limbo,      linear_limbo).
+caracteristica(agapanto, margem_limbo,       inteira).
+caracteristica(agapanto, textura_folha,      lisa_brilhante).
+caracteristica(agapanto, simetria,           actinomorfa).
+caracteristica(agapanto, sexualidade_flor,   perfeita).
+caracteristica(agapanto, merismo,            trimera).
+ 
+% ------------------------------------------------------------
+% AMOR-PERFEITO (Viola × wittrockiana)
+% ------------------------------------------------------------
+caracteristica(amor_perfeito, cor_petala,         com_olho_central).
+caracteristica(amor_perfeito, formato_corola,     rotacea).
+caracteristica(amor_perfeito, disposicao_corola,  simples_disposicao).
+caracteristica(amor_perfeito, numero_petalas,     cinco).
+caracteristica(amor_perfeito, forma_petala,       arredondada).
+caracteristica(amor_perfeito, textura_petala,     velutinosa).
+caracteristica(amor_perfeito, inflorescencia,     flor_solitaria).
+caracteristica(amor_perfeito, polinizacao,        abelhas).
+caracteristica(amor_perfeito, polinizacao,        borboletas).
+caracteristica(amor_perfeito, intensidade_aroma,  suave).
+caracteristica(amor_perfeito, categoria_aroma,    floral_doce).
+caracteristica(amor_perfeito, porte_planta,       rasteira).
+caracteristica(amor_perfeito, ciclo_vida,         anual).
+caracteristica(amor_perfeito, epoca_floracao,     inverno).
+caracteristica(amor_perfeito, habitat_origem,     temperado).
+caracteristica(amor_perfeito, consistencia_caule, herbaceo).
+caracteristica(amor_perfeito, toxicidade,         nao_toxica).
+caracteristica(amor_perfeito, formato_limbo,      oval).
+caracteristica(amor_perfeito, margem_limbo,       crenada).
+caracteristica(amor_perfeito, textura_folha,      lisa_opaca).
+caracteristica(amor_perfeito, simetria,           zigomorfa).
+caracteristica(amor_perfeito, sexualidade_flor,   perfeita).
+caracteristica(amor_perfeito, merismo,            pentamera).
+ 
+% ------------------------------------------------------------
+% COPO-DE-LEITE (Zantedeschia aethiopica)
+% ------------------------------------------------------------
+caracteristica(copo_de_leite, cor_petala,         branco_puro).
+caracteristica(copo_de_leite, formato_corola,     em_espata).
+caracteristica(copo_de_leite, disposicao_corola,  simples_disposicao).
+caracteristica(copo_de_leite, numero_petalas,     uma).
+caracteristica(copo_de_leite, textura_petala,     cerosa_petala).
+caracteristica(copo_de_leite, inflorescencia,     espata_espadice).
+caracteristica(copo_de_leite, polinizacao,        besouros).
+caracteristica(copo_de_leite, polinizacao,        moscas).
+caracteristica(copo_de_leite, intensidade_aroma,  suave).
+caracteristica(copo_de_leite, categoria_aroma,    floral_doce).
+caracteristica(copo_de_leite, porte_planta,       media).
+caracteristica(copo_de_leite, ciclo_vida,         geofita).
+caracteristica(copo_de_leite, epoca_floracao,     primavera).
+caracteristica(copo_de_leite, habitat_origem,     subtropical).
+caracteristica(copo_de_leite, consistencia_caule, herbaceo).
+caracteristica(copo_de_leite, caule_modificado,   rizoma).
+caracteristica(copo_de_leite, toxicidade,         toxica_para_humanos).
+caracteristica(copo_de_leite, formato_limbo,      sagitada).
+caracteristica(copo_de_leite, margem_limbo,       inteira).
+caracteristica(copo_de_leite, textura_folha,      lisa_brilhante).
+caracteristica(copo_de_leite, simetria,           assimetrica).
+caracteristica(copo_de_leite, sexualidade_flor,   imperfeita_pistilada).
+caracteristica(copo_de_leite, sexo_planta,        monoica).
+ 
+% ------------------------------------------------------------
+% DELFÍNIO (Delphinium elatum)
+% ------------------------------------------------------------
+caracteristica(delfinio, cor_petala,         azul_cobalto).
+caracteristica(delfinio, formato_corola,     zigomorfa).
+caracteristica(delfinio, disposicao_corola,  simples_disposicao).
+caracteristica(delfinio, numero_petalas,     cinco).
+caracteristica(delfinio, forma_petala,       arredondada).
+caracteristica(delfinio, textura_petala,     lisa).
+caracteristica(delfinio, inflorescencia,     racemo).
+caracteristica(delfinio, polinizacao,        abelhas).
+caracteristica(delfinio, polinizacao,        mariposas).
+caracteristica(delfinio, intensidade_aroma,  inodora).
+caracteristica(delfinio, porte_planta,       alta).
+caracteristica(delfinio, ciclo_vida,         perene_sempre_verde).
+caracteristica(delfinio, epoca_floracao,     verao).
+caracteristica(delfinio, habitat_origem,     temperado).
+caracteristica(delfinio, consistencia_caule, herbaceo).
+caracteristica(delfinio, toxicidade,         altamente_venenosa).
+caracteristica(delfinio, formato_limbo,      palmatilobada).
+caracteristica(delfinio, margem_limbo,       dentada).
+caracteristica(delfinio, textura_folha,      lisa_opaca).
+caracteristica(delfinio, simetria,           zigomorfa).
+caracteristica(delfinio, sexualidade_flor,   perfeita).
+caracteristica(delfinio, merismo,            pentamera).
+ 
+% ------------------------------------------------------------
+% AMARÍLIS (Hippeastrum hybridum)
+% ------------------------------------------------------------
+caracteristica(amarilis, cor_petala,         vermelho_escarlate).
+caracteristica(amarilis, formato_corola,     infundibuliforme).
+caracteristica(amarilis, disposicao_corola,  simples_disposicao).
+caracteristica(amarilis, numero_petalas,     seis).
+caracteristica(amarilis, forma_petala,       arredondada).
+caracteristica(amarilis, textura_petala,     lisa).
+caracteristica(amarilis, inflorescencia,     umbela).
+caracteristica(amarilis, polinizacao,        passaros).
+caracteristica(amarilis, polinizacao,        abelhas).
+caracteristica(amarilis, intensidade_aroma,  inodora).
+caracteristica(amarilis, porte_planta,       media).
+caracteristica(amarilis, ciclo_vida,         geofita).
+caracteristica(amarilis, epoca_floracao,     inverno).
+caracteristica(amarilis, habitat_origem,     subtropical).
+caracteristica(amarilis, consistencia_caule, herbaceo).
+caracteristica(amarilis, caule_modificado,   bulbo_tunica).
+caracteristica(amarilis, toxicidade,         toxica_para_animais).
+caracteristica(amarilis, formato_limbo,      linear_limbo).
+caracteristica(amarilis, margem_limbo,       inteira).
+caracteristica(amarilis, textura_folha,      lisa_brilhante).
+caracteristica(amarilis, simetria,           actinomorfa).
+caracteristica(amarilis, sexualidade_flor,   perfeita).
+caracteristica(amarilis, merismo,            trimera).
+
+% ------------------------------------------------------------
+% LAVANDA (Lavandula angustifolia)
+% ------------------------------------------------------------
+caracteristica(lavanda, cor_petala,         violeta_claro).
+caracteristica(lavanda, formato_corola,     tubular).
+caracteristica(lavanda, disposicao_corola,  simples_disposicao).
+caracteristica(lavanda, numero_petalas,     cinco).
+caracteristica(lavanda, forma_petala,       lanceolada_petala).
+caracteristica(lavanda, textura_petala,     velutinosa).
+caracteristica(lavanda, inflorescencia,     espiga).
+caracteristica(lavanda, polinizacao,        abelhas).
+caracteristica(lavanda, polinizacao,        borboletas).
+caracteristica(lavanda, intensidade_aroma,  muito_intenso).
+caracteristica(lavanda, categoria_aroma,    herbal_aromatico).
+caracteristica(lavanda, periodo_aroma,      diurno).
+caracteristica(lavanda, porte_planta,       arbustiva).
+caracteristica(lavanda, ciclo_vida,         perene_sempre_verde).
+caracteristica(lavanda, epoca_floracao,     verao).
+caracteristica(lavanda, habitat_origem,     mediterraneo).
+caracteristica(lavanda, consistencia_caule, sublenhoso).
+caracteristica(lavanda, superficie_caule,   piloso).
+caracteristica(lavanda, secao_caule,        quadrangular).
+caracteristica(lavanda, toxicidade,         nao_toxica).
+caracteristica(lavanda, formato_limbo,      linear_limbo).
+caracteristica(lavanda, margem_limbo,       inteira).
+caracteristica(lavanda, textura_folha,      pubescente).
+caracteristica(lavanda, simetria,           zigomorfa).
+caracteristica(lavanda, sexualidade_flor,   perfeita).
+caracteristica(lavanda, merismo,            pentamera).
+ 
+% ------------------------------------------------------------
+% ANTÚRIO (Anthurium andraeanum)
+% ------------------------------------------------------------
+caracteristica(anthurio, cor_petala,         vermelho_escarlate).
+caracteristica(anthurio, formato_corola,     em_espata).
+caracteristica(anthurio, disposicao_corola,  simples_disposicao).
+caracteristica(anthurio, numero_petalas,     uma).
+caracteristica(anthurio, textura_petala,     cerosa_petala).
+caracteristica(anthurio, inflorescencia,     espata_espadice).
+caracteristica(anthurio, polinizacao,        abelhas).
+caracteristica(anthurio, polinizacao,        moscas).
+caracteristica(anthurio, intensidade_aroma,  inodora).
+caracteristica(anthurio, porte_planta,       media).
+caracteristica(anthurio, ciclo_vida,         perene_sempre_verde).
+caracteristica(anthurio, epoca_floracao,     floracao_longa).
+caracteristica(anthurio, habitat_origem,     tropical).
+caracteristica(anthurio, consistencia_caule, herbaceo).
+caracteristica(anthurio, caule_modificado,   rizoma).
+caracteristica(anthurio, raiz_modificada,    aerea).
+caracteristica(anthurio, toxicidade,         toxica_para_humanos).
+caracteristica(anthurio, formato_limbo,      cordada).
+caracteristica(anthurio, margem_limbo,       inteira).
+caracteristica(anthurio, textura_folha,      lisa_brilhante).
+caracteristica(anthurio, simetria,           assimetrica).
+caracteristica(anthurio, sexualidade_flor,   perfeita).
+caracteristica(anthurio, sexo_planta,        monoica).
+
+
+
 % ============================================================
 % REGRAS AUXILIARES DE CONSULTA
 % ============================================================
