@@ -1,5 +1,4 @@
 /**
- * adicionar.js
  * Lógica da página adicionar.html.
  * Lê o nome e os critérios do formulário e chama POST /flores na API Flask.
  */

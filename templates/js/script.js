@@ -1,5 +1,4 @@
 /**
- * script.js
  * Renderiza os campos de filtro botânico no #filters.
  * Utiliza menus dropdown (<select multiple>) para permitir selecionar várias opções.
  *

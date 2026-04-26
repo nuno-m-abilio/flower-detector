@@ -1,5 +1,4 @@
 /**
- * dados_botanicos.js
  * Dicionário de atributos botânicos alinhado com flores.pl e app.py.
  * Chave = nome do atributo no Prolog (ex: "cor_petala").
  * multiselect: true → o usuário pode escolher mais de um valor.

@@ -1,5 +1,4 @@
 /**
- * buscar.js
  * Lógica da página buscar.html.
  * Lê os critérios do formulário via lerCriterios() (script.js),
  * chama a API Flask e renderiza os resultados.
