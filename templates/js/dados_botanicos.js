@@ -3,6 +3,7 @@ const dicionarioBotanico = {
   cor_petalas: {
     label: "Cor das Pétalas",
     opcoes: [
+      // Amarelo
       { valor: "amarelo", texto: "Amarelo"},
       { valor: "amarelo_palha", texto: "Amarelo-palha" },
       { valor: "amarelo_creme", texto: "Amarelo-creme" },
@@ -10,12 +11,14 @@ const dicionarioBotanico = {
       { valor: "amarelo_dourado", texto: "Amarelo-dourado" },
       { valor: "amarelo_ambar", texto: "Amarelo-âmbar" },
       { valor: "amarelo_mostarda", texto: "Amarelo-mostarda" },
+      // Laranja
       { valor: "laranja", texto: "Laranja"},
       { valor: "laranja_pessego", texto: "Laranja-pêssego" },
       { valor: "laranja_claro", texto: "Laranja-claro" },
       { valor: "laranja_vivo", texto: "Laranja-vivo" },
       { valor: "laranja_cobre", texto: "Laranja-cobre" },
       { valor: "laranja_queimado", texto: "Laranja-queimado" },
+      // Vermelho
       { valor: "vermelho", texto: "Vermelho"},
       { valor: "vermelho_rosado", texto: "Vermelho-rosado" },
       { valor: "vermelho_cereja", texto: "Vermelho-cereja" },
@@ -23,6 +26,7 @@ const dicionarioBotanico = {
       { valor: "vermelho_carmim", texto: "Vermelho-carmim" },
       { valor: "vermelho_bordeaux", texto: "Vermelho-bordeaux" },
       { valor: "vermelho_enegrecido", texto: "Vermelho-enegrecido" },
+      // Rosa
       { valor: "rosa", texto: "Rosa"},
       { valor: "rosa_bebe", texto: "Rosa-bebê" },
       { valor: "rosa_quartzo", texto: "Rosa-quartzo" },
@@ -31,6 +35,7 @@ const dicionarioBotanico = {
       { valor: "rosa_pink", texto: "Rosa-pink" },
       { valor: "rosa_fucsia", texto: "Rosa-fúcsia" },
       { valor: "rosa_magenta", texto: "Rosa-magenta" },
+      // Roxo
       { valor: "roxo", texto: "Roxo"},
       { valor: "lilas", texto: "Lilás" },
       { valor: "lavanda", texto: "Lavanda" },
@@ -39,22 +44,26 @@ const dicionarioBotanico = {
       { valor: "violeta_intenso", texto: "Violeta-intenso" },
       { valor: "roxo_escuro", texto: "Roxo-escuro" },
       { valor: "roxo_enegrecido", texto: "Roxo-enegrecido" },
+      // Azul
       { valor: "azul", texto: "Azul"},
       { valor: "azul_celeste", texto: "Azul-celeste" },
       { valor: "azul_periwinkle", texto: "Azul-periwinkle" },
       { valor: "azul_medio", texto: "Azul-médio" },
       { valor: "azul_cobalto", texto: "Azul-cobalto" },
       { valor: "azul_indigo", texto: "Azul-índigo" },
+      // Verde
       { valor: "verde", texto: "Verde"},
       { valor: "verde_claro", texto: "Verde-claro" },
       { valor: "verde_menta", texto: "Verde-menta" },
       { valor: "verde_medio", texto: "Verde-médio" },
       { valor: "verde_escuro", texto: "Verde-escuro" },
+      // Branco
       { valor: "branco", texto: "Branco"},
       { valor: "branco_puro", texto: "Branco-puro" },
       { valor: "branco_creme", texto: "Branco-creme" },
       { valor: "branco_esverdeado", texto: "Branco-esverdeado" },
       { valor: "branco_rosado", texto: "Branco-rosado" },
+      // Multicolor
       { valor: "bicolor_contrastante", texto: "Bicolor contrastante" },
       { valor: "degrade", texto: "Degradê (ombré)" },
       { valor: "manchada_pintalgada", texto: "Manchada / Pintalgada" },
