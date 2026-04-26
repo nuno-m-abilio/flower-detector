@@ -26,17 +26,20 @@
     <main class="body">
       <div class="col">
         <h1>Editar os dados de uma planta</h1>
-        <form action="">
+        <form>
           <div class="row form-item">
             <label for="nome-planta">Nome da planta</label>
             <input type="text" name="nome-planta" id="nome-planta" />
+            <input type="button" id="btn-carregar" value="Carregar Dados" class="action" />
           </div>
-          <h3>Características das flores</h3>
-          <div id="filters" class="filter-container"></div>
-          <input
-            type="submit"
-            onclick="alert('Dados alterados com sucesso!')" value="Editar!"
-          />
+          
+          <p id="feedback" style="display: none; margin-bottom: 15px; font-weight: bold;"></p>
+
+          <div id="area-edicao" style="display: none;">
+            <h3>Modifique as Características:</h3>
+            <div id="filters" class="filter-container"></div>
+            <input type="button" id="btn-editar" value="Salvar Alterações" class="action" />
+          </div>
         </form>
       </div>
     </main>
@@ -59,5 +62,6 @@
     </footer>
     <script src="js/dados_botanicos.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/editar.js"></script>
   </body>
 </html>

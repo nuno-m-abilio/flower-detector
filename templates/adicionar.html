@@ -26,17 +26,17 @@
     <main class="body">
       <div class="col">
         <h1>Adicionar uma nova planta</h1>
-        <form action="">
+        <form id="form-adicionar">
           <div class="row form-item">
             <label for="nome-planta">Nome da planta</label>
             <input type="text" name="nome-planta" id="nome-planta" />
           </div>
           <h3>Características das flores</h3>
           <div id="filters" class="filter-container"></div>
-          <input
-            type="submit"
-            onclick="alert('Planta adicionada com sucesso!')" value="Cadastrar!"
-          />
+          
+          <p id="feedback" style="display: none; margin-bottom: 15px; font-weight: bold;"></p>
+          
+          <input type="button" id="btn-cadastrar" value="Cadastrar!" class="action" />
         </form>
       </div>
     </main>
@@ -59,5 +59,6 @@
     </footer>
     <script src="js/dados_botanicos.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/adicionar.js"></script>
   </body>
 </html>

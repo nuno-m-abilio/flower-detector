@@ -4,6 +4,7 @@ Integra Python (Flask) com SWI-Prolog (via pyswip) como motor de inferência ló
 """
 
 from flask import Flask, request, jsonify, render_template, session
+from flask_cors import CORS
 from pyswip import Prolog, Functor, Variable, Atom, call
 from pyswip.prolog import PrologError
 import os
@@ -15,6 +16,7 @@ import re
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
+CORS(app)
 
 prolog = Prolog()
 

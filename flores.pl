@@ -3,6 +3,8 @@
 :- dynamic caracteristica/3.
 :- dynamic subclasse_cor/2.
 :- dynamic dominio_atributo/2.
+:- discontiguous dominio_atributo/2.
+:- discontiguous grupo_maior/2.
 
 % --- BASE DE DADOS --- 
 
